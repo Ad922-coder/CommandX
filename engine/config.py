@@ -1,0 +1,2 @@
+ASSISTANT_NAME="JARVIS"
+LLM_KEY="AIzaSyAu8jYilxeJm-lxOeV-vejLhbDmqrQ-Dxs"

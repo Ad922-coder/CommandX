@@ -1,0 +1,40 @@
+import pyttsx3
+import speech_recognition as sr
+
+def speak(text):
+    engine = pyttsx3.init('sapi5')
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[2].id)
+    engine.setProperty('rate', 120)
+    if text:
+        engine.say(text)
+        engine.runAndWait()
+
+def takecommand():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print('Listening...')
+        r.pause_threshold = 1
+        r.adjust_for_ambient_noise(source, duration=1)
+        try:
+            audio = r.listen(source, timeout=10, phrase_time_limit=6)
+            print('Recognizing...')
+            query = r.recognize_google(audio, language='en-in')
+            print(f"User said: {query}")
+            return query.lower()
+        except sr.WaitTimeoutError:
+            print("Error: Listening timed out waiting for phrase to start.")
+            return ""
+        except sr.RequestError as e:
+            print(f"Error: Could not request results from Google. {e}")
+            return ""
+        except sr.UnknownValueError:
+            print("Error: Google Speech Recognition could not understand audio.")
+            return ""
+
+if __name__ == "__main__":
+    text = takecommand()
+    if text:
+        speak(text)
+    else:
+        print("No valid input detected. Please try again.")

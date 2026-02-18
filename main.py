@@ -1,0 +1,37 @@
+import os
+import eel
+
+from engine.features import *
+from engine.command import *
+from engine.auth import recoganize
+
+def start():
+    eel.init("www")
+    
+    playAssistantSound()
+    @eel.expose
+    def init():
+        eel.hideLoader()
+        speak("Ready for face Authentication")
+        flag=recoganize.AuthenticateFace()
+        if flag==1:
+            eel.hideFaceAuth()
+            speak("Face authentication Successful")
+            eel.hideFaceAuthSuccess()
+            speak(" Hello,Welcome Sir,How can I help you")
+            eel.hideStart()
+            playAssistantSound()
+        else:
+            speak("Face Authentication not Succesfull")
+        
+    
+    
+
+    
+
+    os.system('start msedge.exe --app="http://localhost:8000/index.html"')
+
+    eel.start('index.html' , mode=None,host='localhost',port=8000)
+
+
+
