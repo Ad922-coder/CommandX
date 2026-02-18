@@ -1,0 +1,11 @@
+Command X — AI Voice-Controlled Personal Assistant 
+
+Command X is an advanced AI-powered voice-controlled personal assistant designed to help users perform daily digital tasks efficiently using simple voice commands. It eliminates the need for manual interaction with devices by enabling hands-free control over various applications and online services. The assistant can perform web browsing, YouTube automation, WhatsApp messaging, voice calls, and video calls, making it a comprehensive solution for communication, information access, and entertainment.
+
+The system is powered by the Google Gemini API, which provides intelligent AI-based query responses and enhances the assistant’s ability to understand and process natural language. Users can ask questions, request information, or give commands in normal conversational language, and Command X responds accurately in real time. This makes the interaction feel natural and user-friendly, similar to communicating with a human assistant.
+
+Command X integrates several advanced technologies to ensure smooth performance and security. Speech recognition technology converts spoken commands into text so the system can interpret user intent, while text-to-speech functionality generates clear voice responses. Face authentication adds an extra layer of security by allowing only authorized users to access personal features such as messages and calls. Additionally, auto word detection enables the assistant to activate instantly when it hears a specific wake word, ensuring a seamless hands-free experience.
+
+The assistant is designed to improve productivity and accessibility for users of all age groups. It can automate repetitive tasks, provide quick answers to queries, and simplify digital interactions, saving both time and effort. Command X is especially useful for multitasking situations where manual device usage is difficult, such as while driving, cooking, or working.
+
+By combining artificial intelligence, voice technology, and secure authentication, Command X creates a smart, fast, and reliable personal assistant. Its goal is to transform the way users interact with technology by making digital services more accessible, efficient, and convenient through the power of voice and AI.
